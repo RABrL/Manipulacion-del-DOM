@@ -27,11 +27,11 @@
                 <!-- <select name="colors" id="colors" onchange="changeColor()"> Llamar función desde el HTML-->
                 <select name="colors" id="colors">
                     <option disabled selected hidden>Choose...</option>
-                    <option value="ff0000">Red</option>
-                    <option value="0000ff">Blue</option>
-                    <option value="008000">Green</option>
-                    <option value="ffff00">Yellow</option>
-                    <option value="ffa500">Orange</option>
+                    <option value="ff0000" class="opt">Red</option>
+                    <option value="0000ff" class="opt">Blue</option>
+                    <option value="008000" class="opt">Green</option>
+                    <option value="ffff00" class="opt">Yellow</option>
+                    <option value="ff4000" class="opt">Orange</option>
                 </select>
                 
                 <label class="label-1" for="number">Number index selected:</label>
@@ -52,7 +52,7 @@
             <form action="" class="form2">
                 <label class="label-2" for="description">Description</label>
 
-                <textarea name="" id="description" cols="50" rows="5" required></textarea>
+                <textarea name="" id="description" cols="50" rows="5" maxlength="50" required></textarea>
                 
                 <input id="btnTextArea" type="button" value="Validate">
             </form>

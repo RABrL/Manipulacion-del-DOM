@@ -21,6 +21,10 @@ main > .exercises{
     text-align: center;
 }
 
+input{
+    text-align: center;
+}
+
 .exercises form:not(.form) {
     min-height: 40vh;
     display: grid;
