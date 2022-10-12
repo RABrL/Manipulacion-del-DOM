@@ -8,12 +8,14 @@ const colorValue = $('#text2')
 const color = $('#value-color')
 
 select.addEventListener('change',() =>{
-    options.forEach((x,i) =>{
+    /* options.forEach((x,i) =>{
         if(select.value === x.value){
             number.value = i+1
-            text.value = x.innerText
+            text.value = x.text
         }
-    })
+    }) */
+    number.value = select.selectedIndex
+    text.value = select.options[select.selectedIndex].text; 
     colorValue.value = select.value
     color.value = `#${select.value}`
 })
