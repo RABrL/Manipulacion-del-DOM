@@ -27,13 +27,15 @@ input{
 
 .exercises form:not(.form) {
     min-height: 40vh;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 2rem;
 }
 
 .button-color{
     width: 100%;
+    max-width: 30rem;
 }
 
 .img-big{
@@ -50,4 +52,14 @@ input{
 }
 .img{
     width: 20%;
+}
+
+input[type='button']{
+    width: 20%;
+    border-radius:.8rem ;
+    background-color: #09f;
+    border: none;
+}
+input[type='button']:hover{
+    background-color: rgba(29, 164, 255, 0.584);
 }
