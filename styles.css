@@ -40,7 +40,8 @@ input{
 
 .img-big{
     width: 100%;
-} 
+    max-height: 30rem;
+}  
 
 .secondaryImages {
     display: flex;
@@ -54,12 +55,28 @@ input{
     width: 20%;
 }
 
-input[type='button']{
-    width: 20%;
+input[type='button']:not(.btn),
+.btns button {
+    width: 10rem;
     border-radius:.8rem ;
     background-color: #09f;
     border: none;
 }
-input[type='button']:hover{
+input[type='button']:hover,
+.btns button:hover{
     background-color: rgba(29, 164, 255, 0.584);
+}
+
+.title7 {
+    margin-bottom: 4rem;
+}
+
+#txtElemento {
+    height: 4rem;
+    font-size: 2rem;
+}
+
+input.btn {
+    width:10rem;
+    font-size: 1.5rem;
 }
