@@ -119,15 +119,19 @@ let eliminarElme = document.querySelectorAll('.delete')
 
 btnAgregar.addEventListener('click', () =>{
     if(inputText.value){
-        let clone = listElem.lastChild.cloneNode(true)
-        clone.innerHTML = `${inputText.value} <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button>`
-        listElem.appendChild(clone)
+        let list = document.createElement('li')
+        list.classList.add('list-group-item')
+        list.innerHTML = `${inputText.value} <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button>`
+        listElem.appendChild(list)
+        inputText.value=''
+        eliminarElme = document.querySelectorAll('.delete')
+        eliminarElme.forEach((x,i) => {
+            x.addEventListener('click', ()=>{
+                listElem.removeChild(listElem.children[i])
+                eliminarElme = document.querySelectorAll('.delete')
+                console.log(eliminarElme)
+            })
+        });
     }else alert('Tienes que agregar contenido al elemento')
-
-    eliminarElme = document.querySelectorAll('.delete')
 })
-
-eliminarElme.forEach(x =>{
-    x.addEventListener('click',()=>{
-    })
-})
+onsole.log(eliminarElme)
