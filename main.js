@@ -134,4 +134,3 @@ btnAgregar.addEventListener('click', () =>{
         });
     }else alert('Tienes que agregar contenido al elemento')
 })
-onsole.log(eliminarElme)
